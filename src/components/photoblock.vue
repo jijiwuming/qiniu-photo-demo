@@ -1,7 +1,7 @@
 <template>
     <div class="photo-wrapper">
         <img class="photo" :src="photo.img">
-        <div>{{photo.name}}</div>
+        <div v-if="showName">{{photo.name}}</div>
     </div>
 </template>
 <script>
@@ -11,6 +11,10 @@ export default {
     photo: {
       type: Photo,
       required: true
+    },
+    showName: {
+      type: Boolean,
+      requiredL: true
     }
   },
   data() {
