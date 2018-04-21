@@ -21,17 +21,19 @@
   position: fixed;
   right: 10px;
   bottom: 80px;
-  background-color: rgb(85, 203, 207)!important;
-  color: white!important;
+  background-color: rgb(85, 203, 207) !important;
+  color: white !important;
 }
 .operation-button:hover {
-  background-color: rgb(118, 231, 235)!important;
+  background-color: rgb(118, 231, 235) !important;
 }
 .upload-img-list {
   position: fixed;
+  margin-left: calc(10% - 10px);
   width: 80%;
   height: 60%;
-  margin-bottom: 60px;
+  overflow: scroll;
+  bottom: 60px;
 }
 </style>
 <script>
@@ -44,17 +46,34 @@ export default {
     PhotoBlock,
     UploadList
   },
-  mounted: function() {
-  },
+  mounted: function() {},
   data() {
     return {
       photos: [],
       showqName: false,
       showUploadList: false,
       list: [
-        new UploadPhoto('1', 'dscaaa.jpg', require('../assets/test.jpg'), 10024, 70),
-        new UploadPhoto('2', 'dscaaa.jpg', require('../assets/test.jpg'), 10024, 70),
-        new UploadPhoto('3', 'dscaaa.jpg', require('../assets/test.jpg'), 10024, 70)
+        new UploadPhoto(
+          '1',
+          'dscaaa.jpg',
+          require('../assets/test.jpg'),
+          10024,
+          70
+        ),
+        new UploadPhoto(
+          '2',
+          'dscaaa.jpg',
+          require('../assets/test.jpg'),
+          10024,
+          70
+        ),
+        new UploadPhoto(
+          '3',
+          'dscaaa.jpg',
+          require('../assets/test.jpg'),
+          10024,
+          70
+        )
       ]
     }
   },
